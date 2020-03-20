@@ -10,7 +10,7 @@ $filepath = 'data\ping1111.log';
 
 $lines = file($filepath);
 $num = count($lines);
-$maxRead = 70;
+$maxRead = 75;
 
 //forward 
 # $maxLines = $num >= $maxRead ?  $maxRead : $num;
@@ -55,7 +55,7 @@ for ($i=$start; $i >= $end; $i--) { // read backward
         $dt = strtotime("$year-$month-$day $hr:$min:$sec");
         
         //$str = str_replace($dt, '', $line);
-        $data[$dt] = 0;
+        $data[$dt] = 1;
 
     } elseif ($nVal > 5) {
         // normally param0 =date, param1 = time, param6 = time

@@ -1,13 +1,6 @@
-<?php
-//graph.php
-?>
-
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="refresh" content="2">
-
-
 <script>
 window.onload = function() {
 
@@ -57,7 +50,6 @@ $.getJSON("pinglog.php", addData);
 <div id="chartContainer" style="height: 300px; width: 100%;"></div>
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/canvasjs.min.js"></script>
-
 <?php echo " Used mem : " . number_format(memory_get_usage(), 0) . ' bytes';?>
 </body>
 </html>

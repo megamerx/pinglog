@@ -1,12 +1,13 @@
 <?php
 //graph.php
+$refresh = 600;
+
 ?>
 
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="refresh" content="2">
-
+<meta http-equiv="refresh" content="<?php echo $refresh;?>">
 
 <script>
 window.onload = function() {
@@ -46,8 +47,11 @@ function addData(data) {
     chart.render();
 }
 
-//$.getJSON("https://canvasjs.com/data/gallery/javascript/daily-sales-data.json", addData);
-$.getJSON("pinglog.php", addData);
+	//$.getJSON("https://canvasjs.com/data/gallery/javascript/daily-sales-data.json", addData);
+	$.getJSON("pinglog.php", addData);
+
+
+setInterval (function(){ $.getJSON("pinglog.php", addData); }, 2000);
 
 }
 </script>
@@ -59,5 +63,9 @@ $.getJSON("pinglog.php", addData);
 
 <?php echo "Date : " . date('Y-m-d h:i:s A', strtotime('+7 hours'));?>
 <?php echo ", Used mem : " . number_format(memory_get_usage(), 0) . ' bytes';?>
+<br/>
+<?php echo "Page refreshes every  " . number_format($refresh / 60, 0) . ' mins';?>
+<?php echo ", last refresh:  " . date('h:i:s A',strtotime("+ 7 hours")) ;?>
+
 </body>
 </html>
