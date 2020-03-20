@@ -3,7 +3,6 @@
 - Intended for use to monitor internet connection if down or up, graphically, via Ping and CanvasJS graph
 - initially intended for For Windows PCS
 
-
 #requirements
 - XAMPP OR minimally apache + php 
 - Internet connection
@@ -15,3 +14,8 @@
 - RUN xampp/apache then start browser and open http://localhost/pinglog/livegraph.php
 
 (c) 2020/merx
+
+Tools / References:
+xampp - https://www.apachefriends.org/index.html
+ping with timestamp: https://stackoverflow.com/questions/24906268/ping-with-timestamp
+canvasjs - https://canvasjs.com/javascript-charts/chart-index-data-label/
