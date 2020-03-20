@@ -13,9 +13,10 @@
 - mklink data\ping1111.log pingLog_1.1.1.1.log
 - RUN xampp/apache then start browser and open http://localhost/pinglog/livegraph.php
 
-(c) 2020/merx
+# Tools / References:
+- XAMPP - https://www.apachefriends.org/index.html
+- Ping with timestamp: https://stackoverflow.com/questions/24906268/ping-with-timestamp
+- Canvasjs - https://canvasjs.com/javascript-charts/chart-index-data-label/
+- Visual Studio Code - https://code.visualstudio.com/
 
-Tools / References:
-xampp - https://www.apachefriends.org/index.html
-ping with timestamp: https://stackoverflow.com/questions/24906268/ping-with-timestamp
-canvasjs - https://canvasjs.com/javascript-charts/chart-index-data-label/
+(c) 2020/merx
