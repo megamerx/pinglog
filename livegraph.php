@@ -48,10 +48,10 @@ function addData(data) {
 }
 
 	//$.getJSON("https://canvasjs.com/data/gallery/javascript/daily-sales-data.json", addData);
-	$.getJSON("pinglog.php", addData);
+	$.getJSON("pinglive.php", addData);
 
 
-setInterval (function(){ $.getJSON("pinglog.php", addData); }, 2000);
+setInterval (function(){ $.getJSON("pinglive.php", addData); }, 2000);
 
 }
 </script>
