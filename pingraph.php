@@ -23,9 +23,11 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	}]
 });
 
-function addData(data) {
-	for (var i = 0; i < data.length; i++) {
-        console.log(i, data[i].date, new Date(data[i].date));
+function addData(new_data) {
+	var data = new_data.data;
+	console.log(i, data[i].date, new Date(data[i].date));
+	for (var i = 0; i < new_data.length; i++) {
+        //console.log(i, data[i].date, new Date(data[i].date));
 
         d = new Date(data[i].date * 1000);
 		dataPoints.push({
@@ -33,11 +35,10 @@ function addData(data) {
 			y: data[i].units
 		});
 	}
-	console.table(dataPoints);
+	//console.table(dataPoints);
     chart.render();
 
-
-
+	$('#pinglogused').html(new_data.stats.mem_usage);
 }
 
 //$.getJSON("https://canvasjs.com/data/gallery/javascript/daily-sales-data.json", addData);
@@ -51,5 +52,6 @@ $.getJSON("pinglog.php", addData);
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/canvasjs.min.js"></script>
 <?php echo " Used mem : " . number_format(memory_get_usage(), 0) . ' bytes';?>
+&nbsp; PinglogUsage : <span id="pinglogused">0</span>
 </body>
 </html>
