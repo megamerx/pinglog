@@ -14,5 +14,11 @@ $dt = strtotime("$year-$month-$day $hr:$min:$sec");
 echo $dt;
 
 */
-$line = '19/03/2020 19:01:18 Request timed out.';
+
+/*$line = '19/03/2020 19:01:18 Request timed out.';
 echo strpos($line, 'Request timed oasdfasdfut');
+*/
+
+$date = 'asdfasdfasdf';
+echo strpos($date, '/');
+
